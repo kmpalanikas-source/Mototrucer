@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Android APKs
 
 on:
   push:
@@ -23,12 +23,19 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.9
-      - name: Build debug APK
+      - name: Build Android APKs
         run: gradle assembleDebug
-      - name: Upload APK
+      - name: Upload Moto Tracker APK
         uses: actions/upload-artifact@v4
         with:
           name: Moto-Tracker-300-Plus-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload Global Car Tracker APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Global-Car-Tracker-2020-Plus-APK
+          path: cars/build/outputs/apk/debug/cars-debug.apk
           if-no-files-found: error
           retention-days: 30
