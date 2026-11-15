@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MotoTracker300Plus"
-include(":app")
+include(":app", ":cars")
