@@ -47,7 +47,7 @@ data class NewMotorcycle(
     val ccExact: String = cc.toString()
 )
 
-// Νέα μοντέλα/νέες πλατφόρμες που παρουσιάστηκαν ή μπήκαν στην αγορά την περίοδο 2016–2026.
+// Νέα μοντέλα/νέες πλατφόρμες που παρουσιάστηκαν ή μπήκαν στην αγορά την περίοδο 2016–2027 (ανακοινώσεις έως 23/11/2026).
 // Δεν περιλαμβάνονται απλές αλλαγές χρωμάτων. Το έτος είναι το πρώτο έτος παρουσίασης/εμπορικής διάθεσης,
 // το οποίο μπορεί να διαφέρει ανά αγορά. Τα ηλεκτρικά μοντέλα καταγράφονται μόνο όταν η ισχύς τους
 // αντιστοιχεί σε κατηγορία άνω των 300 cc.
@@ -349,7 +349,7 @@ fun MotoTrackerApp() {
                 }
                 else -> Column(Modifier.padding(padding).fillMaxSize().padding(16.dp)) {
                     Text("ΝΕΑ ΜΟΝΤΕΛΑ 300+ cc", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
-                    Text("Παγκόσμια νέα μοντέλα 2016–2026", color = Color.LightGray, fontSize = 13.sp)
+                    Text("Παγκόσμια νέα μοντέλα 2016–2027", color = Color.LightGray, fontSize = 13.sp)
                     Spacer(Modifier.height(10.dp))
                     OutlinedTextField(value = newSearch, onValueChange = { newSearch = it }, modifier = Modifier.fillMaxWidth(), placeholder = { Text("Μάρκα, μοντέλο, έτος ή κατηγορία") }, leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) }, singleLine = true)
                     Spacer(Modifier.height(8.dp))
